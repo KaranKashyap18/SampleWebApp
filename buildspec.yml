@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.8
+    commands:
+      - echo Installing packages...
+  build:
+    commands:
+      - echo Build started...
+      - mkdir -p output
+      - cp -r * output/
+artifacts:
+  files:
+    - '**/*'
+  base-directory: output
